@@ -19,7 +19,7 @@ namespace SalesLeadsManagementSystem.Security
         
         private string username = "";
         private string password = "";                       //User given encrypted password      
-        private bool hasPasswordError = false;                      //Error indication
+        private bool hasPasswordError = false;              //Error indication
         private string errorMessege = "";
         private Secure userSensitiveData = null;
 
