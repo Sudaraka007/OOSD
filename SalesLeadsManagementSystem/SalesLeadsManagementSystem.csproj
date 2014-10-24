@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67A17BEE-A740-488A-B483-1E940881367E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SalesLeadsManagementSystem</RootNamespace>
+    <AssemblyName>SalesLeadsManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\Customer\Customer.cs" />
+    <Compile Include="Administration\Customer\CustomerDA.cs" />
+    <Compile Include="Administration\Customer\CustomerHandler.cs" />
+    <Compile Include="Administration\Customer\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Customer\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Product\frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Product\frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\User\FactoryUser.cs" />
+    <Compile Include="Administration\User\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\User\frmUser.designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Product\Product.cs" />
+    <Compile Include="Administration\Product\ProductDA.cs" />
+    <Compile Include="Administration\Product\ProductHandler.cs" />
+    <Compile Include="Administration\User\IUser.cs" />
+    <Compile Include="Administration\User\User.cs" />
+    <Compile Include="Administration\User\UserAccountManager.cs" />
+    <Compile Include="Administration\User\UserDA.cs" />
+    <Compile Include="Administration\User\UserDeputyGeneralManager.cs" />
+    <Compile Include="Administration\User\UserEngineer.cs" />
+    <Compile Include="Administration\User\UserGeneralManager.cs" />
+    <Compile Include="Administration\User\UserHandler.cs" />
+    <Compile Include="Administration\User\UserManager.cs" />
+    <Compile Include="General\DBLink.cs" />
+    <Compile Include="General\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\IDatabaseCommunication.cs" />
+    <Compile Include="General\Rules.cs" />
+    <Compile Include="Sales\Activity.cs" />
+    <Compile Include="Sales\ActivityType.cs" />
+    <Compile Include="Sales\Comment\Comment.cs" />
+    <Compile Include="Sales\Comment\CommentDA.cs" />
+    <Compile Include="Sales\Comment\CommentHandler.cs" />
+    <Compile Include="Sales\Comment\frmComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Comment\frmComment.Designer.cs">
+      <DependentUpon>frmComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmAddUpdateSalesLead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmAddUpdateSalesLead.Designer.cs">
+      <DependentUpon>frmAddUpdateSalesLead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmSelectCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmSelectCustomer.Designer.cs">
+      <DependentUpon>frmSelectCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmSelectProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmSelectProduct.Designer.cs">
+      <DependentUpon>frmSelectProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmViewSalesLeads.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmViewSalesLeads.Designer.cs">
+      <DependentUpon>frmViewSalesLeads.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Quotation\frmQuotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Quotation\frmQuotation.Designer.cs">
+      <DependentUpon>frmQuotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Quotation\IQuotation.cs" />
+    <Compile Include="Sales\Quotation\ProxyQuotation.cs" />
+    <Compile Include="Sales\Quotation\Quotation.cs" />
+    <Compile Include="Sales\Quotation\QuotationDA.cs" />
+    <Compile Include="Sales\Quotation\QuotationHandler.cs" />
+    <Compile Include="Sales\SalesLead.cs" />
+    <Compile Include="Sales\SalesLeadDA.cs" />
+    <Compile Include="Sales\SalesleadsHandler.cs" />
+    <Compile Include="Security\Cryptography.cs" />
+    <Compile Include="Security\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\frmResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\frmResetPassword.Designer.cs">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\Permissions.cs" />
+    <Compile Include="Security\Secure.cs" />
+    <Compile Include="Security\SecureDA.cs" />
+    <Compile Include="Security\UserLogin.cs" />
+    <EmbeddedResource Include="Administration\Customer\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Product\frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\User\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\Comment\frmComment.resx">
+      <DependentUpon>frmComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmAddUpdateSalesLead.resx">
+      <DependentUpon>frmAddUpdateSalesLead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmSelectCustomer.resx">
+      <DependentUpon>frmSelectCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmSelectProduct.resx">
+      <DependentUpon>frmSelectProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmViewSalesLeads.resx">
+      <DependentUpon>frmViewSalesLeads.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\Quotation\frmQuotation.resx">
+      <DependentUpon>frmQuotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Security\frmResetPassword.resx">
+      <DependentUpon>frmResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Analysis\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
