@@ -1,7 +1,4 @@
 OOSD
 ====
 
-Object Oriented Software Development Project 
-
-Mirage
-Rashmo
+Object Oriented Software Development Project
