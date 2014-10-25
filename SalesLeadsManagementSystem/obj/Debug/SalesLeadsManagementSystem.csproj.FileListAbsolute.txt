@@ -24,3 +24,6 @@ E:\UoM\Sem 3\Object Oriented Software Development\Project\Code\SalesLeadsManagem
 E:\UoM\Sem 3\Object Oriented Software Development\Project\Code\SalesLeadsManagementSystem\SalesLeadsManagementSystem\obj\Debug\SalesLeadsManagementSystem.Sales.Comment.frmComment.resources
 E:\UoM\Sem 3\Object Oriented Software Development\Project\Code\SalesLeadsManagementSystem\SalesLeadsManagementSystem\obj\Debug\SalesLeadsManagementSystem.Sales.Quotation.frmQuotation.resources
 E:\UoM\Sem 3\Object Oriented Software Development\Project\Code\SalesLeadsManagementSystem\SalesLeadsManagementSystem\obj\Debug\SalesLeadsManagementSystem.Security.frmResetPassword.resources
+D:\OOSD Project\git\SalesLeadsManagementSystem\bin\Debug\SalesLeadsManagementSystem.exe.config
+D:\OOSD Project\git\SalesLeadsManagementSystem\obj\Debug\SalesLeadsManagementSystem.exe
+D:\OOSD Project\git\SalesLeadsManagementSystem\obj\Debug\SalesLeadsManagementSystem.pdb
