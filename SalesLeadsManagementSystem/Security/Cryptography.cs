@@ -9,7 +9,7 @@ namespace SalesLeadsManagementSystem.Security
 {
 
     /// <summary>
-    /// Class for securing sensitive data
+    /// Class for securing sensitive data.
     /// </summary>
     class Cryptography
     {
