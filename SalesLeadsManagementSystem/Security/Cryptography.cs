@@ -10,6 +10,9 @@ namespace SalesLeadsManagementSystem.Security
 
     /// <summary>
     /// Class for securing sensitive data.
+    /// Adisha
+    /// Test Mirage
+    ///
     /// </summary>
     class Cryptography
     {
